@@ -1,0 +1,24 @@
+#fabisiak-photo {
+    flex: 1;
+}
+
+#fabisiak-text {
+    flex: 2;
+    font-size:  20px;
+}
+
+#awards img {
+    width: 10vw;
+}
+
+#awards {
+    text-align: center;
+    padding: 15px;
+}
+#ulotka{
+  color: black;
+  text-decoration: none;
+}
+#ulotka:hover{
+  text-decoration: underline;
+}

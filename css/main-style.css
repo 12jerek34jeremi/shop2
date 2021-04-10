@@ -1,0 +1,12 @@
+#main-photo {
+    flex: 1;
+}
+
+#main-text {
+    flex: 2;
+    font-size: 20px;	
+}
+
+#main-photo img {
+    width: 25vw;
+}

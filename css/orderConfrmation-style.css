@@ -1,0 +1,24 @@
+#webpage-content{
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.id, .name, .price, .how-many{
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background-color:  rgb(132, 196, 126);
+  line-height: 50px;
+}
+ .name{
+ width: 300px;
+ }
+ #header span{
+    border-bottom: 2px solid rgb(96, 181, 99);
+ }
+ #header{
+    font-weight: bold;
+ }
+ p{
+ font-size: 20px;
+ }

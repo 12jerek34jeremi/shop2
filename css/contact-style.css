@@ -1,0 +1,12 @@
+#contact-photo img {
+    width: 40vw;
+}
+
+#contact-photo {
+    flex: 1;
+}
+
+#contact-text {
+    flex: 1;
+    text-align: center;
+}
