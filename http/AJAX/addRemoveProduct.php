@@ -1,14 +1,13 @@
 <?php session_start();
-if(!isset($_SESSION["basket"])) $_SESSION["basket"] = array_fill(1, 8, false);
-if(!isset($_SESSION["products_number"])) $_SESSION["products_number"] = 0;
-if(!isset($_SESSION["how_many"])) $_SESSION["how_many"] = array_fill(1, 8, 1);
+if(!isset($_SESSION["basket"])) $_SESSION["basket"] = array_fill(1, 8, 0);
 if(isset($_GET["add"])){
     $id = $_GET["add"];
     try{
         $id = (int) $id;
         if($id<1 || $id >8 ) exit();
-        $_SESSION["basket"][$id] = true;
-        $_SESSION["products_number"] ++;
+        if($_SESSION["basket"][$id] == 0){
+            $_SESSION["basket"][$id] = 1;
+        }
     }catch(Exception $e){
         echo "error";
     }
@@ -17,8 +16,7 @@ if(isset($_GET["add"])){
     try{
         $id = (int) $id;
         if($id<1 || $id >8 ) exit();
-        $_SESSION["basket"][$id] = false;
-        $_SESSION["products_number"] --;
+        $_SESSION["basket"][$id] = 0;
     }catch (Exception $e){
         echo "error";
     }
@@ -28,7 +26,7 @@ if(isset($_GET["add"])){
         $id = (int) $id; $how_many = (int) $how_many;
         if($id<1 || $id >8 ) exit();
         if($how_many < 1) exit();
-        $_SESSION["how_many"][$id] = $how_many;
+        $_SESSION["basket"][$id] = $how_many;
     }catch(Exception $e){
         echo "error";
     }
