@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_ION["basket"])) $_ION["basket"] = array_fill(1, 8, 0);
+if(!isset($_SESSION["basket"])) $_SESSION["basket"] = array_fill(1, 8, 0);
 ?>
 <!DOCTYPE html>
 <html lang="pl">
