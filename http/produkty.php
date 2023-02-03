@@ -21,12 +21,13 @@ require_once "render_products.php";
 
     try{
         $data_base = new mysqli($host, $db_username, $db_password, $db_name);
+        $data_base->set_charset("utf8mb4");
         if($data_base->connect_error){
             echo '<h1 class="error">Przepraszamy, nie udało się połączyć z bazą danych. Problemy tehchniczne. Spróbuj ponownie później</h1>';
         }else{
             $products = $data_base->query("SELECT * FROM products")->fetch_all(MYSQLI_ASSOC);
         }
-    }catch(e){
+    }catch(Exception $e){
         echo '<h1 class="error">Przepraszamy, nie udało się połączyć z bazą danych. Problemy tehchniczne. Spróbuj ponownie później</h1>';
     }
 

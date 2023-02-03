@@ -8,7 +8,7 @@ function echo_product_img($id){
     ';
 }
 
-function echo_product_description($id, $name, $price, $description,){
+function echo_product_description($id, $name, $price, $description){
     echo'
     <div class="product-description">
         <h3>'.$name.'</h3>

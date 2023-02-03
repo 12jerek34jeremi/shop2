@@ -22,6 +22,7 @@ if(!isset($_SESSION["basket"])) $_SESSION["basket"] = array_fill(1, 8, 0);
               echo"<h1>Twój koszyk jest pusty. Aby coś zamowić, dodaj to najpierw do koszyka.</h1>";
           }else{
               $data_base = new mysqli($host, $db_username, $db_password, $db_name);
+              $data_base->set_charset("utf8mb4");
               if($data_base->connect_error){
                   header("Location: error.php");
                   exit();
