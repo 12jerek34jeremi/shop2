@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION["basket"])) $_SESSION["basket"] = array_fill(1, 8, 0);
+$_SESSION["basket"] = array_fill(1, 8, 0);
 header("Location: cart.php");
 if(! (isset($_POST['wojewodzwo']) && isset($_POST['adres'])
     && isset($_POST["total-price"])  && isset($_POST["products"]))) exit();
@@ -64,7 +64,7 @@ header_remove("Location");
         <div><p>Łączna cena produktów to: <?=$_POST["total-price"]?> zł.<p></div>
         <div><p>Powyższe produkty zostaną dostarczone na adres: <?=$_POST["adres"]?> do wojewódzwa: <?=$wojewodztwo?>.</p></div>
         </div>
-        
+
         <?php readfile('footer.html'); ?>
     </body>
 </html>
